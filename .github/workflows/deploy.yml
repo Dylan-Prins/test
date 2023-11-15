@@ -1,0 +1,17 @@
+name: Deploy
+
+on:
+  workflow_run:
+    workflows: prepare
+    types:
+      - completed
+
+jobs:
+  test:
+    name: prepare
+    runs-on: ubuntu-latest
+    steps:
+      - name: output 
+        run: | 
+          write-output "deploy"
+          shell: pwsh

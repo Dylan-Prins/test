@@ -1,0 +1,15 @@
+name: Prepare
+
+on:
+  push:
+    branches: main
+
+jobs:
+  test:
+    name: prepare
+    runs-on: ubuntu-latest
+    steps:
+      - name: output 
+        run: | 
+          write-output "prepare"
+        shell: pwsh
