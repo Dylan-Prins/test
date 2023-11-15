@@ -14,4 +14,4 @@ jobs:
       - name: output 
         run: | 
           write-output "deploy"
-          shell: pwsh
+        shell: pwsh
