@@ -3,12 +3,13 @@ name: Deploy
 on:
   workflow_run:
     workflows: prepare
-    types:
-      - completed
+    types: completed
+    branches: main
 
 jobs:
   test:
     name: prepare
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - name: output 
