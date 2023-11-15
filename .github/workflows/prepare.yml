@@ -9,7 +9,13 @@ jobs:
     name: prepare
     runs-on: ubuntu-latest
     steps:
-      - name: output 
-        run: | 
-          write-output "prepare"
-          shell: pwsh
+      - name: Save PR number
+        env:
+          PR_NUMBER: 15
+        run: |
+          mkdir -p ./pr
+          echo $PR_NUMBER > ./pr/pr_number
+      - uses: actions/upload-artifact@v3
+        with:
+          name: pr_number
+          path: pr/
