@@ -12,4 +12,4 @@ jobs:
       - name: output 
         run: | 
           write-output "prepare"
-        shell: pwsh
+          shell: pwsh
