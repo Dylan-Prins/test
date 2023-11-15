@@ -6,13 +6,25 @@ on:
     types: completed
     branches: main
 
+permissions:
+  actions: read
+
 jobs:
   test:
     name: prepare
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
-      - name: output 
-        run: | 
-          write-output "deploy"
-        shell: pwsh
+      - name: Download artifact
+        id: download-artifact
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          workflow: prepare.yml
+          run_id: ${{ github.event.workflow_run.id }}
+          name: pr_number
+          skip_unpack: false
+          if_no_artifact_found: fail
+      - run: |
+          get-item "./pr"
+          get-content "./pr/pr_number"
+
