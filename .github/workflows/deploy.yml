@@ -25,7 +25,7 @@ jobs:
           skip_unpack: false
           if_no_artifact_found: fail
       - run: |
-          get-item "./pr"
-          get-content "./pr/pr_number"
+          get-item "./"
+          get-content "./pr_number"
         shell: pwsh
 
