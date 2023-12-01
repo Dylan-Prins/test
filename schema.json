@@ -6,21 +6,16 @@
       "type": "object",
       "properties": {
         "projects": {
-          "type": "array",
-          "items": [
-            {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "name"
-              ],
-              "properties": {
-                "name": {
-                  "type": "string"
-                }
-              }
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "name"
+          ],
+          "properties": {
+            "name": {
+              "type": "string"
             }
-          ]
+          }
         }
       }
     }
