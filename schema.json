@@ -17,6 +17,24 @@
             },
             "description": {
               "type": "string"
+            },
+            "repos": {
+              "type": "array"
+            },
+            "pipelines": {
+              "type": "array"
+            },
+            "environments": {
+              "type": "array"
+            },
+            "variableGroups": {
+              "type": "array"
+            },
+            "teams": {
+              "type": "array"
+            },
+            "serviceConnections": {
+              "type": "array"
             }
           }
         }
