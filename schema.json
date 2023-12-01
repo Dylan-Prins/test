@@ -6,19 +6,37 @@
       "type": "object",
       "properties": {
         "projects": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": [
-            "name"
-          ],
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "description": {
-              "type": "string"
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "name"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "pipelines": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "description": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
             }
-          }
+          ]
         }
       }
     }
