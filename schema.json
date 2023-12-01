@@ -17,22 +17,6 @@
               "properties": {
                 "name": {
                   "type": "string"
-                },
-                "pipelines": {
-                  "type": "array",
-                  "items": [
-                    {
-                      "type": "object",
-                      "properties": {
-                        "description": {
-                          "type": "string"
-                        },
-                        "name": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  ]
                 }
               }
             }
