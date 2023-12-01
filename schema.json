@@ -19,7 +19,16 @@
               "type": "string"
             },
             "repos": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                }
+              }
             },
             "pipelines": {
               "type": "array"
